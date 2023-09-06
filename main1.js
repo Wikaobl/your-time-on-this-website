@@ -1,14 +1,13 @@
 const counter = () => {
-    let seconds = 0;
+  let seconds = 0;
 
+  const timer = () => {
+    seconds++;
+    document.body.textContent = `jesteś na stronie ${seconds} sekund`;
+  };
 
-    const timer = () => {
-        seconds++;
-        document.body.textContent = `jesteś na stronie ${seconds} sekund`;
-    }
+  return timer;
+};
 
-    return timer
-}
-
-const start = counter()
+const start = counter();
 setInterval(start, 1000);
